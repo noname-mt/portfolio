@@ -39,7 +39,7 @@ const PROJECTS: Project[] = [
   }
 ]
 
-const TECH = ['Python', 'PyTorch', 'TensorFlow', 'LangChain', 'Docker', 'Kubernetes', 'SQL', 'Git']
+const TECH = ['Python', 'PyTorch', 'LangChain', 'Hugging Face', 'Transformers', 'TensorFlow', 'FastAPI', 'Docker', 'Kubernetes', 'CI/CD', 'SQL', 'Git', 'Prometheus']
 
 export default function App(): React.JSX.Element {
   return (
@@ -48,8 +48,12 @@ export default function App(): React.JSX.Element {
         <div className="max-w-5xl mx-auto px-6 py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <h1 className="text-4xl font-extrabold">FARJANA KABIR</h1>
+            <h2 className="text-xl font-semibold mb-4">
+            AI Engineer&nbsp;|&nbsp;LLM &amp; MLOps Specialist
+          </h2>
             {/* <p className="mt-2 text-lg max-w-xl">AI Engineer — I build production-ready ML systems: model development, infra, and deployable services.</p> */}
-            <p className="mt-2 text-lg max-w-xl">AI Engineer — Turning research models into production-grade systems with real-world impact.</p>
+            <p className="mt-2 text-lg max-w-xl">Designing, fine-tuning, and deploying scalable AI systems that turn
+            research breakthroughs into real-world impact.</p>
             <div className="mt-4 flex gap-3">
               <a className="inline-block bg-white text-sky-700 px-4 py-2 rounded-md font-medium" href="mailto:farjanakabirsamanta85@gmail.com">Email</a>
               <a className="inline-block bg-white/20 hover:bg-white/30 px-4 py-2 rounded-md" href="https://github.com/samanta-sc" target="_blank" rel="noreferrer">GitHub</a>
@@ -60,8 +64,8 @@ export default function App(): React.JSX.Element {
           <div className="w-full md:w-64 bg-white/10 rounded-lg p-4">
             <p className="text-sm">Location</p>
             <p className="font-medium">Dhaka, Bangladesh</p>
-            <p className="mt-3 text-sm">Open to: Full-Time roles, Contract, Part-Time, Remote, On-site</p>
-            <a className="mt-4 block font-medium underline" href="https://noname-mt.github.io/resume.pdf">Download Resume</a>
+            <p className="mt-3 text-sm">Open to full-time, contract, and remote roles</p>
+            <a className="mt-4 block font-medium underline" href="https://noname-mt.github.io/resume.pdf">View Resume</a>
           </div>
         </div>
       </header>
@@ -69,7 +73,7 @@ export default function App(): React.JSX.Element {
       <main className="max-w-5xl mx-auto px-6 py-10">
         <section>
           <h2 className="text-2xl font-bold">Highlighted Projects</h2>
-          <p className="mt-2 text-sm text-gray-600">3 selected projects that show full-stack ML + deployment skills.</p>
+          {/* <p className="mt-2 text-sm text-gray-600">3 selected projects that show full-stack ML + deployment skills.</p> */}
 
           <div className="mt-6 grid gap-6 grid-cols-1 md:grid-cols-2">
             {PROJECTS.map((p) => (
@@ -123,7 +127,8 @@ export default function App(): React.JSX.Element {
 
         <section className="mt-12">
           <h2 className="text-2xl font-bold">Contact</h2>
-          <p className="mt-2 text-sm text-gray-600">Open to interviews. Best way to reach me is email or LinkedIn.</p>
+          <p className="mt-2 text-sm text-gray-600">Always open to collaboration and new opportunities in AI and MLOps.
+          Reach out anytime!</p>
           <div className="mt-4 flex gap-3">
             <a className="inline-block px-4 py-2 bg-sky-600 text-white rounded-md" href="mailto:farjanakabirsamanta85@gmail.com">Email</a>
             <a className="inline-block px-4 py-2 border rounded-md" href="https://github.com/samanta-sc">GitHub</a>
