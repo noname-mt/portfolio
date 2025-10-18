@@ -1,0 +1,138 @@
+import React from 'react'
+
+type Project = {
+  title: string
+  subtitle: string
+  bullets: string[]
+  tags: string[]
+}
+
+const PROJECTS: Project[] = [
+  {
+    title: 'Smart Doc Summarizer',
+    subtitle: 'End-to-end NLP pipeline — ingestion, retrieval-augmented generation, and deployment',
+    bullets: [
+      'Built retrieval + LLM pipeline using LangChain and FAISS; fine-tuned a T5 model for abstractive summarization.',
+      'Dockerized and deployed as a FastAPI service with CI/CD; latency 300ms per request (p99).',
+      'Repo: https://github.com/YOUR_GITHUB_USERNAME/smart-doc-summarizer'
+    ],
+    tags: ['PyTorch', 'LangChain', 'FAISS', 'FastAPI', 'Docker']
+  },
+  {
+    title: 'Production Anomaly Detector',
+    subtitle: 'Time-series anomaly detection with streaming and alerting',
+    bullets: [
+      'Designed a light-weight LSTM + seasonal decomposition model for near-real-time anomaly detection.',
+      'Integrated with Kafka for streaming, Prometheus for metrics, and alerting on Slack.',
+      'Repo: https://github.com/YOUR_GITHUB_USERNAME/anomaly-detector'
+    ],
+    tags: ['PyTorch', 'Kafka', 'Prometheus', 'Docker']
+  },
+  {
+    title: 'Vision Search',
+    subtitle: 'Image search using embeddings and approximate nearest neighbors',
+    bullets: [
+      'Built image encoder using contrastive learning; indexed embeddings with Annoy for fast nearest-neighbor search.',
+      'Demo: hosted Hugging Face Space (link) and GitHub repo.',
+    ],
+    tags: ['PyTorch', 'Annoy', 'Hugging Face']
+  }
+]
+
+const TECH = ['Python', 'PyTorch', 'TensorFlow', 'LangChain', 'Docker', 'Kubernetes', 'SQL', 'Git']
+
+export default function App(): React.JSX.Element {
+  return (
+    <div className="min-h-screen bg-gray-50 text-gray-900 antialiased">
+      <header className="bg-gradient-to-r from-sky-600 to-indigo-600 text-white">
+        <div className="max-w-5xl mx-auto px-6 py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div>
+            <h1 className="text-4xl font-extrabold">FARJANA KABIR</h1>
+            {/* <p className="mt-2 text-lg max-w-xl">AI Engineer — I build production-ready ML systems: model development, infra, and deployable services.</p> */}
+            <p className="mt-2 text-lg max-w-xl">AI Engineer — Turning research models into production-grade systems with real-world impact.</p>
+            <div className="mt-4 flex gap-3">
+              <a className="inline-block bg-white text-sky-700 px-4 py-2 rounded-md font-medium" href="mailto:farjanakabirsamanta85@gmail.com">Email</a>
+              <a className="inline-block bg-white/20 hover:bg-white/30 px-4 py-2 rounded-md" href="https://github.com/samanta-sc" target="_blank" rel="noreferrer">GitHub</a>
+              <a className="inline-block bg-white/20 hover:bg-white/30 px-4 py-2 rounded-md" href="https://www.linkedin.com/in/farjana-kabir-samanta-2a8802321/" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+          </div>
+
+          <div className="w-full md:w-64 bg-white/10 rounded-lg p-4">
+            <p className="text-sm">Location</p>
+            <p className="font-medium">Dhaka, Bangladesh</p>
+            <p className="mt-3 text-sm">Open to: Full-Time roles, Contract, Part-Time, Remote, On-site</p>
+            <a className="mt-4 block font-medium underline" href="https://noname-mt.github.io/resume.pdf">Download Resume</a>
+          </div>
+        </div>
+      </header>
+
+      <main className="max-w-5xl mx-auto px-6 py-10">
+        <section>
+          <h2 className="text-2xl font-bold">Highlighted Projects</h2>
+          <p className="mt-2 text-sm text-gray-600">3 selected projects that show full-stack ML + deployment skills.</p>
+
+          <div className="mt-6 grid gap-6 grid-cols-1 md:grid-cols-2">
+            {PROJECTS.map((p) => (
+              <article key={p.title} className="bg-white rounded-2xl shadow p-5">
+                <h3 className="text-lg font-semibold">{p.title}</h3>
+                <p className="text-sm text-gray-600">{p.subtitle}</p>
+                <ul className="mt-3 list-disc pl-5 text-sm space-y-1 text-gray-700">
+                  {p.bullets.map((b, i) => (
+                    <li key={i}>{b}</li>
+                  ))}
+                </ul>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {p.tags.map((t) => (
+                    <span key={t} className="text-xs bg-gray-100 px-2 py-1 rounded-full">{t}</span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold">Tech Stack</h2>
+          <div className="mt-4 flex flex-wrap gap-3">
+            {TECH.map((t) => (
+              <div key={t} className="px-3 py-2 bg-white rounded-lg shadow-sm text-sm">{t}</div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold">Experience</h2>
+          <div className="mt-4 space-y-4">
+            <div className="bg-white rounded-2xl p-5 shadow">
+              <h3 className="font-semibold">Machine Learning Engineer — Company ABC</h3>
+              <p className="text-sm text-gray-600">Jan 2022 — Present</p>
+              <ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
+                <li>Led an NLP project that reduced manual review time by 40% via an automated summarization pipeline.</li>
+                <li>Implemented CI/CD for model retraining and deployment, decreasing time-to-update from weeks to hours.</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-2xl p-5 shadow">
+              <h3 className="font-semibold">Data Scientist — Startup XYZ</h3>
+              <p className="text-sm text-gray-600">Jun 2019 — Dec 2021</p>
+              <ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
+                <li>Built end-to-end pipelines for feature engineering and model serving; contributed to performance improvements and production stability.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold">Contact</h2>
+          <p className="mt-2 text-sm text-gray-600">Open to interviews. Best way to reach me is email or LinkedIn.</p>
+          <div className="mt-4 flex gap-3">
+            <a className="inline-block px-4 py-2 bg-sky-600 text-white rounded-md" href="mailto:farjanakabirsamanta85@gmail.com">Email</a>
+            <a className="inline-block px-4 py-2 border rounded-md" href="https://github.com/samanta-sc">GitHub</a>
+            <a className="inline-block px-4 py-2 border rounded-md" href="https://www.linkedin.com/in/farjana-kabir-samanta-2a8802321/">LinkedIn</a>
+          </div>
+        </section>
+
+        <footer className="mt-16 text-center text-sm text-gray-500">© {new Date().getFullYear()} FARJANA KABIR — AI Engineer</footer>
+      </main>
+    </div>
+  )
+}
