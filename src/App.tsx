@@ -7,37 +7,91 @@ type Project = {
   tags: string[]
 }
 
+// const PROJECTS: Project[] = [
+//   {
+//     title: 'Smart Doc Summarizer',
+//     subtitle: 'End-to-end NLP pipeline — ingestion, retrieval-augmented generation, and deployment',
+//     bullets: [
+//       'Built retrieval + LLM pipeline using LangChain and FAISS; fine-tuned a T5 model for abstractive summarization.',
+//       'Dockerized and deployed as a FastAPI service with CI/CD; latency 300ms per request (p99).',
+//       'Repo: https://github.com/YOUR_GITHUB_USERNAME/smart-doc-summarizer'
+//     ],
+//     tags: ['PyTorch', 'LangChain', 'FAISS', 'FastAPI', 'Docker']
+//   },
+//   {
+//     title: 'Production Anomaly Detector',
+//     subtitle: 'Time-series anomaly detection with streaming and alerting',
+//     bullets: [
+//       'Designed a light-weight LSTM + seasonal decomposition model for near-real-time anomaly detection.',
+//       'Integrated with Kafka for streaming, Prometheus for metrics, and alerting on Slack.',
+//       'Repo: https://github.com/YOUR_GITHUB_USERNAME/anomaly-detector'
+//     ],
+//     tags: ['PyTorch', 'Kafka', 'Prometheus', 'Docker']
+//   },
+//   {
+//     title: 'Vision Search',
+//     subtitle: 'Image search using embeddings and approximate nearest neighbors',
+//     bullets: [
+//       'Built image encoder using contrastive learning; indexed embeddings with Annoy for fast nearest-neighbor search.',
+//       'Demo: hosted Hugging Face Space (link) and GitHub repo.',
+//     ],
+//     tags: ['PyTorch', 'Annoy', 'Hugging Face']
+//   }
+// ]
+
 const PROJECTS: Project[] = [
   {
-    title: 'Smart Doc Summarizer',
-    subtitle: 'End-to-end NLP pipeline — ingestion, retrieval-augmented generation, and deployment',
+    title: 'PolySumm – Bilingual Text Summarizer (EN + BN)',
+    subtitle: 'Multilingual abstractive summarization optimized with ONNX runtime and 8-bit quantization',
     bullets: [
-      'Built retrieval + LLM pipeline using LangChain and FAISS; fine-tuned a T5 model for abstractive summarization.',
-      'Dockerized and deployed as a FastAPI service with CI/CD; latency 300ms per request (p99).',
-      'Repo: https://github.com/YOUR_GITHUB_USERNAME/smart-doc-summarizer'
+      'Built bilingual summarizer (Bengali + English) using mT5-small and Hugging Face Transformers.',
+      'Optimized inference with ONNX runtime, reducing runtime from 71s → 21s.',
+      'Evaluated using ROUGE metrics (Best ROUGE-L = 0.0654).',
     ],
-    tags: ['PyTorch', 'LangChain', 'FAISS', 'FastAPI', 'Docker']
+    tags: ['Transformers', 'mT5', 'ONNX', 'Python', 'NLP']
   },
   {
-    title: 'Production Anomaly Detector',
-    subtitle: 'Time-series anomaly detection with streaming and alerting',
+    title: 'DocMind – Intelligent Retrieval-QA System',
+    subtitle: 'LLM-powered Q&A using RAG, LangChain Agents, and contextual retrieval',
     bullets: [
-      'Designed a light-weight LSTM + seasonal decomposition model for near-real-time anomaly detection.',
-      'Integrated with Kafka for streaming, Prometheus for metrics, and alerting on Slack.',
-      'Repo: https://github.com/YOUR_GITHUB_USERNAME/anomaly-detector'
+      'Developed end-to-end retrieval-augmented generation pipeline for document Q&A.',
+      'Implemented query rewriting, contextual retrieval, and agentic reasoning via LangChain.',
+      'Logged responses, latency, and sources using LangSmith for full observability.',
     ],
-    tags: ['PyTorch', 'Kafka', 'Prometheus', 'Docker']
+    tags: ['LangChain', 'RAG', 'AstraDB', 'FastAPI', 'LLM']
   },
   {
-    title: 'Vision Search',
-    subtitle: 'Image search using embeddings and approximate nearest neighbors',
+    title: 'ShopBot AI – Multilingual Ecommerce Assistant',
+    subtitle: 'Bilingual chatbot for personalized shopping recommendations and order assistance',
     bullets: [
-      'Built image encoder using contrastive learning; indexed embeddings with Annoy for fast nearest-neighbor search.',
-      'Demo: hosted Hugging Face Space (link) and GitHub repo.',
+      'Built bilingual (EN + BN) ecommerce chatbot using FastAPI + NLP.',
+      'Integrated with live product database for real-time recommendations.',
+      'Dockerized and deployed via AWS EC2 with CI/CD using GitHub Actions.',
     ],
-    tags: ['PyTorch', 'Annoy', 'Hugging Face']
-  }
-]
+    tags: ['FastAPI', 'Docker', 'AWS EC2', 'NLP', 'CI/CD']
+  },
+  {
+    title: 'TripGenie – AI Travel Planner',
+    subtitle: 'AI-powered travel planner integrating real-time data, cost estimation, and itinerary generation',
+    bullets: [
+      'Developed intelligent trip planner using Python and LangChain with live weather & activity APIs.',
+      'Generated personalized itineraries with total expense estimation and summary output.',
+      'Delivered end-to-end trip insights combining multiple real-time data sources.',
+    ],
+    tags: ['Python', 'LangChain', 'APIs', 'AI Agent']
+  },
+  {
+    title: 'MediLingua – AI Health Assistant (EN + BN)',
+    subtitle: 'Bilingual medical Q&A system fine-tuned with LoRA for efficient inference',
+    bullets: [
+      'Built multilingual health assistant using Llama-3.2-3B-Instruct (Unsloth) with LoRA fine-tuning.',
+      'Enabled automatic language detection (EN + BN) and trained on medical QA datasets.',
+      'Deployed as lightweight FastAPI service (validation loss: 0.74).',
+    ],
+    tags: ['Llama-3.2', 'LoRA', 'FastAPI', 'Groq API', 'NLP']
+  },
+];
+
 
 const TECH = ['Python', 'PyTorch', 'LangChain', 'Hugging Face', 'Transformers', 'TensorFlow', 'FastAPI', 'Docker', 'Kubernetes', 'CI/CD', 'SQL', 'Git', 'Prometheus']
 
@@ -71,29 +125,33 @@ export default function App(): React.JSX.Element {
       </header>
 
       <main className="max-w-5xl mx-auto px-6 py-10">
-        <section>
-          <h2 className="text-2xl font-bold">Highlighted Projects</h2>
-          {/* <p className="mt-2 text-sm text-gray-600">3 selected projects that show full-stack ML + deployment skills.</p> */}
+  <section>
+    <h2 className="text-2xl font-bold">Highlighted Projects</h2>
 
-          <div className="mt-6 grid gap-6 grid-cols-1 md:grid-cols-2">
-            {PROJECTS.map((p) => (
-              <article key={p.title} className="bg-white rounded-2xl shadow p-5">
-                <h3 className="text-lg font-semibold">{p.title}</h3>
-                <p className="text-sm text-gray-600">{p.subtitle}</p>
-                <ul className="mt-3 list-disc pl-5 text-sm space-y-1 text-gray-700">
-                  {p.bullets.map((b, i) => (
-                    <li key={i}>{b}</li>
-                  ))}
-                </ul>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {p.tags.map((t) => (
-                    <span key={t} className="text-xs bg-gray-100 px-2 py-1 rounded-full">{t}</span>
-                  ))}
-                </div>
-              </article>
+    <div className="mt-6 grid gap-6 grid-cols-1 md:grid-cols-2">
+      {PROJECTS.map((p) => (
+        <article key={p.title} className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition-all duration-300">
+          <h3 className="text-lg font-semibold">{p.title}</h3>
+          <p className="text-sm text-gray-600">{p.subtitle}</p>
+          <ul className="mt-3 list-disc pl-5 text-sm space-y-1 text-gray-700">
+            {p.bullets.map((b, i) => (
+              <li key={i}>{b}</li>
+            ))}
+          </ul>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {p.tags.map((t) => (
+              <span
+                key={t}
+                className="text-xs bg-gray-100 px-2 py-1 rounded-full text-gray-700 font-medium"
+              >
+                {t}
+              </span>
             ))}
           </div>
-        </section>
+        </article>
+      ))}
+    </div>
+  </section>
 
         <section className="mt-12">
           <h2 className="text-2xl font-bold">Tech Stack</h2>
