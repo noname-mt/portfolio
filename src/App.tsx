@@ -163,25 +163,33 @@ export default function App(): React.JSX.Element {
         </section>
 
         <section className="mt-12">
-          <h2 className="text-2xl font-bold">Experience</h2>
-          <div className="mt-4 space-y-4">
-            <div className="bg-white rounded-2xl p-5 shadow">
-              <h3 className="font-semibold">Machine Learning Engineer — Company ABC</h3>
-              <p className="text-sm text-gray-600">Jan 2022 — Present</p>
-              <ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
-                <li>Led an NLP project that reduced manual review time by 40% via an automated summarization pipeline.</li>
-                <li>Implemented CI/CD for model retraining and deployment, decreasing time-to-update from weeks to hours.</li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-2xl p-5 shadow">
-              <h3 className="font-semibold">Data Scientist — Startup XYZ</h3>
-              <p className="text-sm text-gray-600">Jun 2019 — Dec 2021</p>
-              <ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
-                <li>Built end-to-end pipelines for feature engineering and model serving; contributed to performance improvements and production stability.</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+  <h2 className="text-2xl font-bold">Experience</h2>
+  <div className="mt-4 space-y-4">
+    
+    <div className="bg-white rounded-2xl p-5 shadow">
+      <h3 className="font-semibold">Senior Data Scientist — Somikoron</h3>
+      <p className="text-sm text-gray-600">Sep 2023 — Feb 2025 · Remote</p>
+      <ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
+        <li>Led Bangla Q&A generation initiative using LLM architectures; achieved <strong>93% evaluation accuracy</strong> across standardized exam sets.</li>
+        <li>Developed a <strong>10-class road defect detection system</strong> improving Roads & Highways maintenance efficiency by ~80%.</li>
+        <li>Enhanced NLP pipelines with <strong>n-gram–based structural and semantic modeling</strong>, improving downstream performance by ~40%.</li>
+        <li>Re-engineered Bangla stemmer and lemmatizer with a team of 3; reduced unique token count by <strong>3.34%</strong> and improved morphological consistency.</li>
+        <li>Designed optimized data structures improving recommender performance by <strong>10%</strong> and documented metrics for handover.</li>
+      </ul>
+    </div>
+
+    <div className="bg-white rounded-2xl p-5 shadow">
+      <h3 className="font-semibold">Data Scientist — Somikoron</h3>
+      <p className="text-sm text-gray-600">Mar 2023 — Aug 2023 · Remote</p>
+      <ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
+        <li>Built Bengali corpora and ML applications aligned to business goals; standardized text-cleaning and NLP pipelines.</li>
+        <li>Extracted and structured <strong>~50 key data fields</strong> from diverse sources to enhance linguistic datasets and power downstream models.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
 
         <section className="mt-12">
           <h2 className="text-2xl font-bold">Contact</h2>
