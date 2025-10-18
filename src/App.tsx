@@ -52,7 +52,7 @@ export default function App(): React.JSX.Element {
             AI Engineer&nbsp;|&nbsp;LLM &amp; MLOps Specialist
           </h2>
             {/* <p className="mt-2 text-lg max-w-xl">AI Engineer — I build production-ready ML systems: model development, infra, and deployable services.</p> */}
-            <p className="mt-2 text-base max-w-xl">Designing, fine-tuning, and deploying scalable AI systems that turn
+            <p className="mt-2 text-lg max-w-xl">Designing, fine-tuning, and deploying scalable AI systems that turn
             research breakthroughs into real-world impact.</p>
             <div className="mt-4 flex gap-3">
               <a className="inline-block bg-white text-sky-700 px-4 py-2 rounded-md font-medium" href="mailto:farjanakabirsamanta85@gmail.com">Email</a>
