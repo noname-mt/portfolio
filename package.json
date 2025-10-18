@@ -1,9 +1,9 @@
 {
-  "name": "my-portfolio",
+  "name": "portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://noname-mt.github.io/my-portfolio",
+  "homepage": "https://noname-mt.github.io/portfolio",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
